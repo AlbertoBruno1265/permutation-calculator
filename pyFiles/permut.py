@@ -1,34 +1,30 @@
-def fatorial(valor):
+def factorial(value):
     result = 1
-    for l in range(valor, 0, -1):
-        result *= l
+    for n in range(value, 0, -1):
+        result *= n
 
     return result
 
-palavra = str(input("Digite a frase a ser permutada: ")).upper()
 
-letras = {}
+word = str(input("Write the word: ")).upper()
+letters_count = {}
+repetition = []
 
-repeticao = []
+for l in word:
 
-for l in palavra:
-    
-    if l not in letras:
-        letras[l] = 1
+    if l not in letters_count:
+        letters_count[l] = 1
 
     else:
-        letras[l] += 1
+        letters_count[l] += 1
 
-
-for k, v in letras.items():
+for k, v in letters_count.items():
     if v > 1:
-        repeticao.append(v)
+        repetition.append(v)
+
 div = 1
-for n in repeticao:
-    div *= fatorial(n)
+for number in repetition:
+    div *= factorial(number)
 
-conta = fatorial(len(palavra))/div
-print(conta)
-
-
-
+final = factorial(len(word)) / div
+print(f"The total of permutations is: {final}")
