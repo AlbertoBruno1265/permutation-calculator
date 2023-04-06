@@ -1,5 +1,6 @@
 # Permutation-Calculator
- A simple project to calculate permutations to help study for college entrance exams.
+## A calculator of how many anagrams can be formed with a name
+A simple project to calculate permutations to help study for college entrance exams.
  
  ## Requeriments:
  - Python 3.6 or >
